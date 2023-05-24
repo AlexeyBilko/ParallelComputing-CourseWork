@@ -40,6 +40,10 @@ class Program
 
         Entity[] entities = GenerateRandomEntities(arraySize);
 
+        //PyramidSort(entities); 
+
+        //entities = ModifiedPyramidSort(entities);
+
         entities = ModifiedParallelPyramidSort(entities);
 
         return IsSorted(entities) ? true : false;
@@ -88,7 +92,7 @@ class Program
         Entity[] entities = new Entity[1];
         entities[0] = new Entity(value);
 
-        entities = ModifiedParallelPyramidSort(entities);
+        PyramidSort(entities);
 
         return entities.Length == 1 && entities[0].Number == value ? true : false;
     }
